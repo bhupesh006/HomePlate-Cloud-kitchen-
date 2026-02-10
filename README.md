@@ -1,4 +1,4 @@
-# 🍽️ Cloud Kitchen Platform
+# Cloud Kitchen Platform - HOMEPLATE
 
 ## 📌 Project Overview
 The **Cloud Kitchen Platform** is a web-based application that allows **home-based women entrepreneurs** to sell homemade food through a digital platform. It mainly targets **working professionals and students** who struggle to find healthy, affordable food due to busy lifestyles.
@@ -27,7 +27,7 @@ The platform connects local home cooks with customers, enabling easy food discov
 - User authentication and role-based access  
 - Home cook and customer dashboards  
 - Menu creation and management  
-- Food discovery based on location
+- Food discovery
 - Rating and review system 
 - Order placement
 - Secure backend data handling with **MongoDB**  
