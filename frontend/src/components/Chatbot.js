@@ -39,7 +39,7 @@ const Chatbot = () => {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-orange-500 text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transition"
+        className="fixed bottom-6 right-6 bg-gray-800 text-white p-4 rounded-full shadow-lg hover:bg-gray-900 transition"
         aria-label="Open Chat"
       >
         <MessageCircle size={32} />
@@ -67,7 +67,7 @@ const Chatbot = () => {
               className={`max-w-[80%] p-3 rounded-lg ${
                 msg.role === 'bot'
                   ? 'bg-gray-200 text-gray-800'
-                  : 'bg-orange-500 text-white'
+                  : 'bg-gray-800 text-white'
               }`}
             >
               {msg.content}
@@ -89,13 +89,13 @@ const Chatbot = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="flex-1 px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+          className="flex-1 px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-gray-600"
           placeholder="Ask a question..."
           disabled={isLoading}
         />
         <button
           type="submit"
-          className="bg-orange-500 text-white p-3 rounded-full hover:bg-orange-600 disabled:bg-gray-400"
+          className="bg-gray-800 text-white p-3 rounded-full hover:bg-gray-900 disabled:bg-gray-400"
           disabled={isLoading}
         >
           <Send size={20} />

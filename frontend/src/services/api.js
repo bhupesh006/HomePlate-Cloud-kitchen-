@@ -53,11 +53,9 @@ export const sellerAPI = {
   getSellerStats: () => api.get('/seller/stats'),
   
   // Sends FormData (with file)
-  updateLogo: (formData) => api.patch('/seller/logo', formData, {
-     headers: {
-      'Content-Type': 'multipart/form-data',
-    },
-  }),
+  updateLogo: (formData) => api.patch('/seller/logo', formData),
+
+  updateProfile: (profileData) => api.patch('/seller/profile', profileData),
 };
 
 // --- Review API ---
