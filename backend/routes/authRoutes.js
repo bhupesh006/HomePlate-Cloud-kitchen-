@@ -51,13 +51,26 @@ router.post('/customer/login', async (req, res) => {
 // Seller Registration
 router.post('/seller/register', async (req, res) => {
   try {
-    const { businessName, ownerName, username, email, password, phone, address, fssaiNumber } = req.body;
+    const { businessName, ownerName, username, email, password, phone, address, fssaiNumber, aadhaarNumber, panNumber, bankAccountNo, ifscCode } = req.body;
     
     const existingSeller = await Seller.findOne({ $or: [{ email }, { username }] });
     if (existingSeller) return res.status(400).json({ error: 'Email or username already registered' });
     
     const hashedPassword = await bcrypt.hash(password, 10);
-    const seller = new Seller({ businessName, ownerName, username, email, password: hashedPassword, phone, address, fssaiNumber });
+    const seller = new Seller({ 
+      businessName, 
+      ownerName, 
+      username, 
+      email, 
+      password: hashedPassword, 
+      phone, 
+      address, 
+      fssaiNumber,
+      aadhaarNumber,
+      panNumber,
+      bankAccountNo,
+      ifscCode
+    });
     await seller.save();
     
     res.status(201).json({ message: 'Seller registered successfully. Please wait for verification.', seller: { id: seller._id, businessName: seller.businessName } });

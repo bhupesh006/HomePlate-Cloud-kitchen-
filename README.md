@@ -30,7 +30,11 @@ The platform connects local home cooks with customers, enabling easy food discov
 - Food discovery
 - Rating and review system 
 - Order placement
-- Secure backend data handling with **MongoDB**  
+- **Enhanced Seller Onboarding**:
+  - Secure verification sections (Aadhaar/ID Proof, PAN, and Bank Details)
+  - Real-time input constraints (numeric-only restrictions for Aadhaar & Bank Account; automatic uppercase alphanumeric formatting for PAN & IFSC)
+  - Password matching validation (Confirm Password field checks)
+- Secure backend data handling with **MongoDB** and Express.js
 
 ---
 
@@ -38,10 +42,12 @@ The platform connects local home cooks with customers, enabling easy food discov
 ### Frontend
 - React.js  
 - Tailwind CSS  
+- Lucide React (Icons)
 
 ### Backend
 - Node.js  
 - Express.js  
+- Mongoose (MongoDB ODM)
 
 ### Database
 - MongoDB  
@@ -50,6 +56,32 @@ The platform connects local home cooks with customers, enabling easy food discov
 - Git & GitHub  
 - Postman (API testing)  
 - Figma / Canva (UI design)  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js installed on your machine
+- MongoDB instance running locally (default: `mongodb://localhost:27017/homeplate`)
+
+### Setup Instructions
+
+1. **Clone the repository** and navigate to the project directory.
+
+2. **Run the Backend Server**:
+   ```bash
+   cd backend
+   npm install
+   npm run dev
+   ```
+
+3. **Run the Frontend App**:
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
 
 ---
 
